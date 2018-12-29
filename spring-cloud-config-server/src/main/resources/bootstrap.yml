@@ -3,3 +3,20 @@ server:
 spring:
   application:
     name: cloud-config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: http://121.40.174.53/uto-server/uto-config-repo.git
+          username: uto_deploy
+          password: uto1122333
+          default-label: prod_new_one
+#        native:
+#          search-locations: D:/Works/uto-config-repo/
+#  profiles:
+#    active: native
+
+eureka:
+  instance:
+    instance-id: ${spring.cloud.client.ipAddress}:${server.port}
+    prefer-ip-address: true
