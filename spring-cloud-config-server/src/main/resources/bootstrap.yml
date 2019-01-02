@@ -11,14 +11,12 @@ security:
     password: user
   basic:
     enabled: false
+
 spring:
-  profiles:
-    active: dev
   cloud:
     config:
       server:
         git:
-          basedir: spring-cloud-config-repo/config-repo
           search-paths: spring-cloud-config-repo/config-repo
           uri: https://github.com/wisherd/frame/
           username: wisherd                                       # git仓库的账号

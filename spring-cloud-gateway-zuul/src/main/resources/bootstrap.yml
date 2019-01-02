@@ -3,10 +3,10 @@ server:
 spring:
   cloud:
     config:
-      label: master
       discovery:
         enabled: true
         service-id: config-service
   application:
     name: service-zuul
+
 
