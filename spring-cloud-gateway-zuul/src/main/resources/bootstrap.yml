@@ -1,3 +1,5 @@
+server:
+  port: 8090
 spring:
   cloud:
     config:
@@ -7,3 +9,4 @@ spring:
         service-id: config-service
   application:
     name: service-zuul
+
