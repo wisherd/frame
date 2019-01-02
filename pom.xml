@@ -12,6 +12,7 @@
         <module>spring-cloud-common</module>
         <module>spring-cloud-config-repo</module>
         <module>spring-cloud-config-server</module>
+        <module>spring-cloud-discovery-eureka</module>
     </modules>
 
     <properties>
@@ -199,11 +200,7 @@
                 <artifactId>quartz-jobs</artifactId>
                 <version>2.3.0</version>
             </dependency>
-            <dependency>
-                <groupId>javax.servlet</groupId>
-                <artifactId>servlet-api</artifactId>
-                <version>2.5</version>
-            </dependency>
+
             <dependency>
                 <groupId>org.apache.curator</groupId>
                 <artifactId>curator-test</artifactId>

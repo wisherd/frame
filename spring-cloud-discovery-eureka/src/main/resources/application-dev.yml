@@ -1,0 +1,18 @@
+eureka:
+  datacenter: ali-hangzhou
+  environment: dev
+  instance:
+    lease-expiration-duration-in-seconds: 30
+    lease-renewal-interval-in-seconds: 10
+    prefer-ip-address: true
+    instance-id:  ${spring.cloud.client.ipAddress}:${server.port}
+  server:
+    enable-self-preservation: false     # 设为false，关闭自我保护
+    eviction-interval-timer-in-ms: 4000    # 清理间隔（单位毫秒，默认是60*1000）
+  client:
+    healthcheck:
+          enabled: true
+    registerWithEureka: false
+    fetchRegistry: false
+    serviceUrl:
+      defaultZone: http://user:user@${spring.cloud.client.ipAddress}:${server.port}/eureka/

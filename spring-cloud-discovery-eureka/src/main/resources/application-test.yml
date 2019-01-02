@@ -1,0 +1,18 @@
+spring:
+  profiles: test
+eureka:
+  datacenter: ali-hangzhou
+  environment: test
+  instance:
+    secureVirtualHostName: ${spring.application.name}.2
+    metadataMap:
+      instanceId: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+  securePortEnabled: true
+  nonSecurePortEnabled: true
+  server:
+    enable-self-preservation: false
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+#    serviceUrl:
+#      defaultZone: http://172.16.0.9:${server.port}/eureka/

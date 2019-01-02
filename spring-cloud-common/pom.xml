@@ -154,10 +154,6 @@
 			<groupId>dom4j</groupId>
 			<artifactId>dom4j</artifactId>
 		</dependency>
-	   <dependency>
-		   <groupId>javax.servlet</groupId>
-		   <artifactId>servlet-api</artifactId>
-	   </dependency>
 	</dependencies>
 
 	<build>

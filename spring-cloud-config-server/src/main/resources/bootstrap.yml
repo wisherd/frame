@@ -1,20 +1,30 @@
 server:
-  port: 2000
+  port: 8888
+
+#g关闭验证
+management:
+  security:
+    enabled: false
+security:
+  user:
+    name: user
+    password: user
+  basic:
+    enabled: false
 spring:
-  application:
-    name: cloud-config-server
+  profiles:
+    active: dev
   cloud:
     config:
       server:
         git:
-          uri: http://121.40.174.53/uto-server/uto-config-repo.git
-          username: uto_deploy
-          password: uto1122333
-          default-label: prod_new_one
-#        native:
-#          search-locations: D:/Works/uto-config-repo/
-#  profiles:
-#    active: native
+          basedir: spring-cloud-config-repo/config-repo
+          search-paths: spring-cloud-config-repo/config-repo
+          uri: https://github.com/wisherd/frame/
+          username: wisherd                                       # git仓库的账号
+          password: lw367598
+  application:
+    name: config-service
 
 eureka:
   instance:

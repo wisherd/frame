@@ -24,7 +24,6 @@ import javax.net.ssl.SSLSession;
 import javax.net.ssl.SSLSocketFactory;
 import javax.net.ssl.TrustManager;
 import javax.net.ssl.X509TrustManager;
-import javax.servlet.http.HttpServletRequest;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -274,7 +273,7 @@ public class HttpUtil {
 		return sb.toString();
 	}
 	
-	public static String readIncommingRequestData(HttpServletRequest request) {
+	/*public static String readIncommingRequestData(HttpServletRequest request) {
 		BufferedReader br = null;
 		try {
 			StringBuilder result = new StringBuilder();
@@ -292,5 +291,5 @@ public class HttpUtil {
 				try {br.close();} catch (IOException e) {e.printStackTrace();}
 			}
 		}
-	}
+	}*/
 }
