@@ -13,6 +13,7 @@
         <module>spring-cloud-config-repo</module>
         <module>spring-cloud-config-server</module>
         <module>spring-cloud-discovery-eureka</module>
+        <module>spring-cloud-gateway-zuul</module>
     </modules>
 
     <properties>
