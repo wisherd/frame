@@ -147,27 +147,19 @@ public class XmlUtils {
 		}
 		return map;
 	}
-//	public static void main(String[] args){
-//		String xml = "<?xml version=\"1.0\" encoding=\"GBK\"?>" +
-//				"<bookstore>" +
-//				"<book>" +
-//				"<title lang=\"eng\">Harry Potter</title>" +
-//				"<price> 29.99 </price>" +
-//				"</book>" +
-//				"</bookstore>";
-//
-//		xml = "<notify><trade_status>TRADE_FINISHED</trade_status><total_fee>0.90</total_fee><subject>123456</subject><out_trade_no>1118060201-7555</out_trade_no><notify_reg_time>2010-11-18 14:02:43.000</notify_reg_time><trade_no>2010111800209965</trade_no></notify>";
-//		//DB_LOGGER.warn(getNodeText(document, "/bookstore/book[1]"));
-//		//DB_LOGGER.warn(getNodeText(document, "/bookstore/book[1]/price"));
-//		//DB_LOGGER.warn(getNodeText(document, "/bookstore/book[2]/title/@lang"));
-//		//DB_LOGGER.warn(getNodeText(document, "/bookstore/book[2]/description"));
-//		//DB_LOGGER.warn("xx"+getNodeText(document, "/bookstore/book[1]/price22"));
-//		//printNode(document, "//*");//所有Element节点
-//		//printNode(document, "//node()");//所有节点
-//		//printNode(document, "//title | //price");//所有节点
-//		//DB_LOGGER.warngetNodeTextList(document, "/bookstore/book/price", true));
-//		Map<String, Object> map = xml2Map(xml);
-//		System.out.println(map);
-//	}
+	public static void main(String[] args){
+		String xml = "<?xml version=\"1.0\" encoding=\"GBK\"?>" +
+				"<bookstore>" +
+				"<book>" +
+				"<title lang=\"eng\">Harry Potter</title>" +
+				"<price> 29.99 </price>" +
+				"</book>" +
+				"</bookstore>";
+
+		//xml = "<notify><trade_status>TRADE_FINISHED</trade_status><total_fee>0.90</total_fee><subject>123456</subject><out_trade_no>1118060201-7555</out_trade_no><notify_reg_time>2010-11-18 14:02:43.000</notify_reg_time><trade_no>2010111800209965</trade_no></notify>";
+
+		Map<String, Object> map = xml2Map(xml);
+		System.out.println(map);
+	}
 
 }
